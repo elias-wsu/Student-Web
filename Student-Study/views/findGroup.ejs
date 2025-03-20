@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StudentStudy | Join a Group</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* CSS styles go here */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: rgb(250, 244, 244);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+      }
+      #logo {
+        font-size: 24px;
+        font-weight: bold;
+        padding-right: 20px;
+        color: black;
+      }
+      #register,
+      #join {
+        margin-right: 20px;
+        font-size: small;
+        color: black;
+        text-decoration: none;
+      }
+
+      #left-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      #right-header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      button {
+        background-color: rgb(61, 61, 193);
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      #login1 {
+        margin-right: 10px;
+      }
+
+      #search-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+      }
+      #search-card {
+        width: 60%;
+        height: 80%;
+        padding: 20px;
+        border: 1px solid black;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: left;
+      }
+
+      #search-title {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      #search-bar {
+        width: 100%;
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+      }
+
+      #search-label {
+        font-size: 18px;
+        margin-bottom: 10px;
+        text-align: flex-end;
+      }
+
+      #search-input {
+        width: 80%;
+        border: 1px solid black;
+        font-size: 16px;
+        padding: 5px;
+        background-image: url("https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_search_48px-512.png");
+        background-position: 5px;
+        background-size: 20px;
+        background-repeat: no-repeat;
+        text-indent: 20px;
+      }
+
+      #search-button:hover {
+        background-color: #2f6f2f;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include("header") %>
+    <div id="search-container">
+      <div id="search-card">
+        <h2>Find a Group</h2>
+        <p>Don't see your group? Register one <a href="/group/register">here</a>! </p>
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+    <section id="group-details">
+    
+            <% for (group of groups) { %>
+
+              
+
+              <div class="card mx-auto" style="width: 90%;">
+                <div class="card-body">
+                  <h2 class="card-title"><%= group.name %></h2>
+                  <h5 class="card-subtitle mb-2 text-body-secondary"><%= group.subject %></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary"><%= group.expdate %> </h6>
+                  <p class="card-text"><%= group.groupbio %></p>
+
+                  <a href=<%= "/group/view/" + group.groupid %>>
+                    <button type="submit" class="btn btn-primary" id="register-button">Details</button>
+                  </a>
+                  
+                  
+                  
+                </div>
+              </div>
+
+              <br>
+
+        
+            <% } %>
+          
+    </section>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StudentStudy | Create Account</title>
+  </head>
+
+  <style>
+    body {
+	background-color: #f1f1f1;
+}
+
+.create-account-card {
+	margin: auto;
+	margin-top: 100px;
+	padding: 20px;
+	background-color: #fff;
+	width: 400px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	text-align: center;
+    
+}
+
+h1 {
+	margin-top: 0;
+    font-size: medium;
+}
+
+form {
+	display: inline-block;
+	text-align: left;
+}
+
+label {
+	display: block;
+	margin-top: 10px;
+}
+
+
+input[type="text"],
+input[type="password"],
+select,
+input[type="email"] {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	box-sizing: border-box;
+}
+
+.register-btn {
+	background-color: rgb(61, 61, 193);
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.register-btn:hover {
+	background-color:rgb(61, 61, 193);
+}
+
+p {
+	margin-top: 10px;
+}
+
+a {
+	color: rgb(61, 61, 193);
+}
+
+  </style>
+
+  <body>
+
+    <%- include("header") %>
+    
+    <div class="create-account-card">
+      <h1>Create an Account</h1>
+      <form method="post" action="/signup">
+
+        <input type="text" placeholder="First name" name="firstname" required />
+
+        <input type="text" placeholder="Last name" name="lastname" required />
+
+        <input type="text" placeholder="Username" name="username" required />
+
+        <input type="text" placeholder="School" name="school" required />
+
+        
+
+        <input
+          type="email"
+          placeholder="Email address"
+          name="email"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          required
+        />
+
+        <button type="submit" class="register-btn">Register</button>
+      </form>
+      <p>Already have an account? <a href="/login">Login</a></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <style>
+    /* CSS styles go here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: rgb(250, 244, 244);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+    #logo {
+      font-size: 18px;
+      font-weight: bold;
+      padding-right: 10px;
+      padding-top: 10px;
+      color: black;
+      text-decoration: none;
+      height: 4rem;
+    }
+    #logo .a {
+      text-decoration: none;
+    }
+
+    a:visited {
+      text-decoration: none;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    a:active {
+      text-decoration: none;
+    }
+
+    #register,
+    #join {
+      margin-right: 20px;
+      font-size: small;
+      color: black;
+      text-decoration: none;
+    }
+
+    #left-header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    #right-header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    button {
+      background-color: rgb(61, 61, 193);
+      color: white;
+      border: none;
+      padding: 10px;
+
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #login {
+      margin-right: 10px;
+    }
+
+    .bg-custom-1 {
+      background-color: #85144b;
+    }
+
+    .bg-custom-2 {
+      background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    }
+
+    .profile-name {
+      color: black;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      left: 1rem;
+      color: black;
+      text-decoration: none;
+      font-style: normal;
+    }
+
+    html {
+      box-sizing: border-box;
+    }
+
+    * {
+      box-sizing: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    nav {
+      background-color: #fff;
+      padding: 0 3rem;
+      border-radius: 0.625rem;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 0rem;
+      z-index: 10;
+    }
+
+    li {
+      list-style-type: none;
+      position: relative;
+      padding: 0.625rem 0 0.5rem;
+      z-index: 10;
+    }
+    li ul {
+      flex-direction: column;
+      position: absolute;
+      background-color: white;
+      align-items: flex-start;
+      transition: all 0.5s ease;
+      width: 8rem;
+      right: 1.5rem;
+      top: 4.5rem;
+      border-radius: 0.325rem;
+      gap: 0;
+      padding: 1rem 0rem;
+      opacity: 0;
+      box-shadow: 0px 0px 100px rgba(20, 18, 18, 0.25);
+      display: none;
+    }
+
+    ul li:hover > ul,
+    ul li ul:hover .profile-name:hover .profile:hover {
+      visibility: visible;
+      opacity: 1;
+      display: flex;
+    }
+
+    .material-icons-outlined {
+      color: #888888;
+      transition: all 0.3s ease-out;
+    }
+
+    .material-icons-outlined:hover {
+      color: #ff9800;
+      transform: scale(1.25) translateY(-4px);
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .profile {
+      height: 3rem;
+      width: auto;
+      cursor: pointer;
+      /* Make rounded */
+      border-radius: 50%;
+      /* Move over to left */
+      margin-right: 3.5rem;
+      /* Bring to front */
+      z-index: 10;
+    }
+
+    .sub-item {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 0.725rem;
+      cursor: pointer;
+      padding: 0.5rem 1.5rem;
+      z-index: 10;
+    }
+
+    .sub-item:hover {
+      background-color: rgba(232, 232, 232, 0.4);
+      z-index: 10;
+    }
+
+    .sub-item:hover .material-icons-outlined {
+      color: #ff9800;
+      transform: scale(1.08) translateY(-2px);
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .sub-item:hover p {
+      color: #000;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .sub-item p {
+      font-size: 0.85rem;
+      color: #888888;
+      font-weight: 500;
+      margin: 0.4rem 0;
+      flex: 1;
+      z-index: 10;
+    }
+  </style>
+
+  <body>
+    <header>
+      <div id="left-header">
+        <a href="/">
+          <div id="logo">
+            <img
+              src="/images/StudentStudy Image.png"
+              alt="LOGO"
+              width="45"
+              height="45"
+            />
+          </div>
+        </a>
+        <a href="/group/join" id="join">Join a Group</a>
+        <a href="/about" id="join">About Us</a>
+      </div>
+      <div id="right-header">
+        <!-- When we're logged in, allow the user to access their own personal information page -->
+        <% if(loggedIn) { %>
+
+        <ul>
+          <li>
+            <img
+              src="/images/blank-profile-picture-973460_960_720.webp"
+              class="profile"
+            />
+            <ul>
+              <a href="/profile" class="profile-name">
+                <li class="sub-item">
+                  <a href="/profile" class="profile-name">
+                    <span class="material-icons-outlined"> Profile </span>
+                  </a>
+                </li>
+              </a>
+              <a href="/logout" class="profile-name">
+                <li class="sub-item">
+                  <a href="/logout" class="profile-name">
+                    <span class="material-icons-outlined"> Logout </span>
+                  </a>
+                </li>
+              </a>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Otherwise, give the user the ability to log in / out -->
+        <% } else { %>
+        <a href="/login" id="login">
+          <button id="login">Login</button>
+        </a>
+        <a href="/signup" id="login">
+          <button>Sign Up</button>
+        </a>
+        <% } %>
+      </div>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+/* CSS styles go here */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(250, 244, 244);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#logo {
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+#logo .a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+#register,
+#join {
+    margin-right: 20px;
+    font-size: small;
+    color: black;
+    text-decoration: none;
+}
+
+#left-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#right-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+button {
+    background-color: rgb(61, 61, 193);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#login1 {
+    margin-right: 10px;
+}
+
+.carousel-item {
+
+    display: block;
+    position: relative;
+    object-fit: cover;
+    max-height: 475px;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.565);
+}
+
+.slide-pic {
+    width: 550px;
+    padding-left: 40px;
+    padding-top: 20px;
+
+    padding-bottom: 20px;
+
+    object-fit: cover;
+}
+.slides{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+
+    flex-direction: row;
+}
+.detail-row{
+    flex: 100%;
+}
+.detail-row{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+h5{
+    font-weight: 800 !important;
+}
+.card-body{
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+.one{
+    background-color: rgb(250, 244, 244);
+
+}
+.two{
+    background-color: white;
+
+}

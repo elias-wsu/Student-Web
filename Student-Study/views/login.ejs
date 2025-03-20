@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StudentStudy | Login</title>
+    
+  </head>
+  <style>
+    body {
+	background-color: #f1f1f1;
+}
+
+.login-card {
+	margin: auto;
+	margin-top: 100px;
+	padding: 20px;
+	background-color: #fff;
+	width: 500px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+h1 {
+	margin-top: 0;
+}
+
+form {
+	display: inline-block;
+	text-align: left;
+}
+
+label {
+	display: block;
+	margin-top: 10px;
+  
+}
+
+input[type="text"],
+input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	box-sizing: border-box;
+  
+}
+
+.login-btn {
+	background-color: rgb(61, 61, 193);
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.login-btn:hover {
+	background-color: rgb(61, 61, 193);
+}
+
+p {
+	margin-top: 20px;
+}
+
+a {
+	color: rgb(61, 61, 193);
+}
+  </style>
+
+  <body>
+
+    <%- include("header") %>
+
+    <div class="login-card">
+      <h1>Log in to your account</h1>
+      <form method="post" action="/login">
+        <input
+          type="text"
+          placeholder="Username"
+          name="username"
+          required
+        />
+
+        <input
+          type="Password"
+          placeholder="Password"
+          name="password"
+          required
+        />
+
+        <button type="submit" class="login-btn">Login</button>
+
+        <p>Don't have an account? <a href="/signup">Register</a></p>
+      </form>
+    </div>
+  </body>
+</html>
+<!--
+<input type="text" placeholder="Enter Username" name="username" required> 
+<label>Password : </label> <input type="password" placeholder="Enter Password" name="password" required>
+-->

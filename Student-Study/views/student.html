@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student View </title>
+    <script src="https://kit.fontawesome.com/e74a4f9bfa.js" crossorigin="anonymous"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        height: 100vh;
+      }
+
+      .left-panel {
+        background-color: #f2f2f2;
+        width: 20%;
+        padding: 20px;
+        border-right: 1px solid #ccc;
+      }
+
+      .left-panel ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .left-panel li {
+        margin: 0 0 10px 0;
+        border-radius: 5px;
+      }
+
+      .left-panel a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        padding: 10px;
+      }
+
+      .left-panel a:hover {
+        background-color: #ccc;
+      }
+
+      .left-panel span {
+        margin-left: 10px;
+      }
+
+      .left-panel .indicator {
+        margin-left: auto;
+      }
+
+      .left-panel .indicator i {
+        margin-left: 10px;
+      }
+
+      .left-panel ul ul {
+        margin-top: 10px;
+        border-left: 1px solid #ccc;
+        padding-left: 10px;
+        display: none;
+      }
+
+      .left-panel ul ul li {
+        margin: 0;
+      }
+
+      .left-panel ul li:hover > ul {
+        display: block;
+      }
+
+      .right-panel {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .chat-history {
+        flex: 1;
+        background-color: #fff;
+        overflow-y: scroll;
+      }
+
+      .message-box {
+        display: flex;
+        align-items: center;
+        background-color: #f2f2f2;
+        padding: 10px;
+      }
+
+      .message-box input[type="text"] {
+        flex: 1;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+      }
+
+      .message-box i {
+        font-size: 20px;
+        margin-left: 10px;
+        color: #333;
+        cursor: pointer;
+      }
+    </style>
+  <body>
+    <div class="container">
+      <div class="left-panel">
+        <ul>
+          <li>
+            <a href="#">
+              <i class="fa fa-home"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-group"></i>
+              <span>Group Name</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-tools"></i>
+              <span>Tools</span>
+            </a>
+            <ul>
+              <li><a href="#">Members</a></li>
+              <li><a href="#">Sub-item 2</a></li>
+              <li><a href="#">media</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-bell"></i>
+              <span>Notifications</span>
+            </a>
+            <ul>
+              <li><a href="#">Item 2</a></li>
+              <li><a href="#">Item 3</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-chair"></i>
+              <span>Group Settings</span>
+            </a>
+            <ul>
+                <li><a href="#">Sub-item 1</a></li>
+                <li><a href="#">Sub-item 2</a></li>
+                <li><a href="#">Delete Group</a></li>
+              </ul>
+          </li>
+          <a href="#">
+            <i class="fa fa-setting"></i>
+            <span>Item 3....</span>
+          </a>
+        </ul>
+      </div>
+      <div class="right-panel">
+        <div class="chat-history"></div>
+        <div class="message-box">
+          <input type="text" placeholder="Message" />
+          <i class="fa fa-microphone"></i>
+          <i class="fa fa-microphone-slash"></i>
+          <i class="fa fa-link"></i>
+          <i class="fa fa-image"></i>
+          <i class="fa fa-gift"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
